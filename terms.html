@@ -1,16 +1,120 @@
-<!doctype html>
-<html><head><meta charset="utf-8"><title>Quran Horizons Terms of Use</title></head>
-<body style="font-family:sans-serif;max-width:680px;margin:40px auto;padding:0 20px;line-height:1.6;color:#222;">
-<h1>Terms of Use</h1>
-<p><em>Last updated: September 24, 2026</em></p>
-<h2>What this is</h2>
-<p>Quran Horizons is a private automation tool, built and operated by a single individual, whose only function is publishing pre-produced Quran recitation videos to one TikTok account, <strong>@thequranhorizons</strong>, through TikTok's Content Posting API.</p>
-<h2>Who may use it</h2>
-<p>This app is not offered to the public. It has one operator and connects to one TikTok account.</p>
-<h2>Acceptable use</h2>
-<p>The app publishes only content the operator has produced and reviewed. All content follows TikTok's own Community Guidelines and Terms of Service.</p>
-<h2>No warranty</h2>
-<p>This tool is provided as-is, for personal, non-commercial use by its operator.</p>
-<h2>Contact</h2>
-<p>Questions can be sent via a direct message to <a href="https://www.tiktok.com/@thequranhorizons">@thequranhorizons</a> on TikTok.</p>
-</body></html>
+﻿<!doctype html>
+<title>Quran Horizons Terms of Service</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMwZTE0MjQiLz4KICA8cGF0aCBkPSJNMzggMTQgQTE4IDE4IDAgMSAwIDM4IDUwIEExNC41IDE0LjUgMCAxIDEgMzggMTQgWiIgZmlsbD0iI2QyYWU2ZCIvPgogIDxwYXRoIGQ9Ik00NiAxNiBMNDcuNiAyMC40IEw1MiAyMiBMNDcuNiAyMy42IEw0NiAyOCBMNDQuNCAyMy42IEw0MCAyMiBMNDQuNCAyMC40IFoiIGZpbGw9IiNkMmFlNmQiLz4KPC9zdmc+Cg==">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600&family=Amiri:wght@400&display=swap">
+<style>
+  /* layout: single centered reading column, ornamental rule under the title, numbered clauses */
+  :root {
+    --bg: #0e1424;
+    --surface: #161f36;
+    --surface-line: #273252;
+    --text: #eee7d6;
+    --text-dim: #93a0c2;
+    --accent: #d2ae6d;
+    --accent-dim: #8a7244;
+    --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --sans: 'Work Sans', system-ui, -apple-system, sans-serif;
+    --arabic: 'Amiri', serif;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.7;
+    padding-block: calc(56px + env(safe-area-inset-top, 0px)) calc(64px + env(safe-area-inset-bottom, 0px));
+    padding-inline: 20px;
+  }
+  main { max-width: 680px; margin: 0 auto; }
+  a { color: var(--accent); text-decoration-color: var(--accent-dim); text-underline-offset: 3px; }
+  a:hover { text-decoration-color: var(--accent); }
+  .eyebrow {
+    display: flex; align-items: center; gap: 10px;
+    font-family: var(--sans); font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--text-dim); margin-bottom: 18px;
+  }
+  .eyebrow .crescent { color: var(--accent); font-size: 15px; }
+  h1 {
+    font-family: var(--serif); font-weight: 600; font-style: italic;
+    font-size: clamp(2.1rem, 6vw, 2.8rem); line-height: 1.15; margin: 0 0 8px;
+    text-wrap: balance;
+  }
+  .updated { color: var(--text-dim); font-size: 14px; margin: 0 0 28px; }
+  .rule {
+    border: none; height: 1px; margin: 0 0 36px;
+    background: linear-gradient(90deg, var(--accent-dim), transparent 70%);
+  }
+  section { margin-bottom: 34px; }
+  h2 {
+    font-family: var(--serif); font-weight: 600; font-size: 1.5rem;
+    color: var(--accent); margin: 0 0 10px; display: flex; gap: 10px; align-items: baseline;
+  }
+  h2 .num { font-family: var(--sans); font-size: 0.8rem; color: var(--text-dim); font-weight: 500; }
+  p { margin: 0 0 12px; max-width: 62ch; }
+  ul { margin: 0 0 12px; padding-left: 1.2em; }
+  li { margin-bottom: 6px; max-width: 60ch; }
+  .card {
+    background: var(--surface); border: 1px solid var(--surface-line); border-radius: 10px;
+    padding: 18px 20px; margin: 18px 0;
+  }
+  footer {
+    margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--surface-line);
+    display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: baseline;
+    font-size: 14px; color: var(--text-dim);
+  }
+  footer nav { display: flex; gap: 20px; }
+</style>
+
+<main>
+  <p class="eyebrow"><span class="crescent">вѕ</span> Quran Horizons</p>
+  <h1>Terms of Service</h1>
+  <p class="updated">Last updated October 6, 2026</p>
+  <hr class="rule">
+
+  <section>
+    <h2><span class="num">01</span> What this covers</h2>
+    <p>Quran Horizons (<a href="https://www.youtube.com/@quranhorizonstv">@quranhorizonstv</a>) is a single-operator media channel that publishes Qur'an recitation videos вЂ” full Surahs, mushaf-page readings, and short reminders вЂ” with Arabic text and English translation. This site exists to support the channel's own TikTok integration, a tool the operator uses to publish their own recitation videos to their own TikTok account through TikTok's Content Posting API.</p>
+    <p>These terms apply to that integration and to this site. They don't apply to TikTok itself, or to any third party's use of TikTok.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span> What the integration does</h2>
+    <div class="card">
+      <p style="margin:0">It reads the operator's already-prepared video files and publishes them to the operator's own TikTok account, using the account credentials the operator authorizes through TikTok's standard OAuth consent flow. It does not post on behalf of anyone else, and it does not read, modify, or publish content belonging to other TikTok accounts.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span> Content</h2>
+    <p>Every video published through this integration is Qur'an recitation audio paired with Arabic script and English translation, prepared by the operator. The operator is responsible for the accuracy of the Arabic text and translation shown, and corrects errors when they're found.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span> No warranty</h2>
+    <p>This integration is provided as-is, for the operator's own use. It's offered without warranty of any kind, express or implied, including fitness for a particular purpose or uninterrupted availability.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span> Changes</h2>
+    <p>These terms may be updated as the channel's tools change. The date above reflects the latest revision.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">06</span> Contact</h2>
+    <p>Questions about these terms: <a href="mailto:liliiasul1553@gmail.com">liliiasul1553@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <span>В© 2026 Quran Horizons</span>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </footer>
+</main>
+

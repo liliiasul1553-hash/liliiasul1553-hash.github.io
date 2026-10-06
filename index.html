@@ -1,6 +1,156 @@
-<!doctype html>
-<html><head><meta charset="utf-8"><title>Quran Horizons</title></head>
-<body style="font-family:sans-serif;max-width:680px;margin:40px auto;padding:0 20px;">
-<h1>Quran Horizons</h1>
-<p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Use</a></p>
-</body></html>
+﻿<!doctype html>
+<title>Quran Horizons</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMwZTE0MjQiLz4KICA8cGF0aCBkPSJNMzggMTQgQTE4IDE4IDAgMSAwIDM4IDUwIEExNC41IDE0LjUgMCAxIDEgMzggMTQgWiIgZmlsbD0iI2QyYWU2ZCIvPgogIDxwYXRoIGQ9Ik00NiAxNiBMNDcuNiAyMC40IEw1MiAyMiBMNDcuNiAyMy42IEw0NiAyOCBMNDQuNCAyMy42IEw0MCAyMiBMNDQuNCAyMC40IFoiIGZpbGw9IiNkMmFlNmQiLz4KPC9zdmc+Cg==">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600&family=Amiri:wght@400&display=swap">
+<style>
+  /* layout: single centered column; ornamental crescent/star rule opens each major section */
+  :root {
+    --bg: #0e1424;
+    --surface: #161f36;
+    --surface-line: #273252;
+    --text: #eee7d6;
+    --text-dim: #93a0c2;
+    --accent: #d2ae6d;
+    --accent-dim: #8a7244;
+    --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --sans: 'Work Sans', system-ui, -apple-system, sans-serif;
+    --arabic: 'Amiri', serif;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background:
+      radial-gradient(ellipse 60% 40% at 50% -10%, rgba(210,174,109,0.08), transparent 60%),
+      var(--bg);
+    color: var(--text); font-family: var(--sans); font-size: 16px; line-height: 1.7;
+    padding-block: calc(0px + env(safe-area-inset-top, 0px)) calc(64px + env(safe-area-inset-bottom, 0px));
+    padding-inline: 20px;
+  }
+  main { max-width: 680px; margin: 0 auto; }
+  a { color: var(--accent); text-decoration-color: var(--accent-dim); text-underline-offset: 3px; }
+  a:hover { text-decoration-color: var(--accent); }
+
+  header.hero { padding-block: 64px 48px; text-align: center; }
+  .mark { font-size: 34px; color: var(--accent); margin-bottom: 18px; letter-spacing: 0.3em; }
+  .arabic-title { font-family: var(--arabic); font-size: clamp(1.6rem, 6vw, 2.2rem); color: var(--accent); margin: 0 0 10px; direction: rtl; }
+  h1 {
+    font-family: var(--serif); font-weight: 600; font-style: italic;
+    font-size: clamp(2.4rem, 8vw, 3.6rem); line-height: 1.1; margin: 0 0 14px; text-wrap: balance;
+  }
+  .tagline { color: var(--text-dim); font-size: 1.05rem; max-width: 46ch; margin: 0 auto; }
+
+  .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 22px; border-radius: 999px; font-size: 15px; font-weight: 500;
+    text-decoration: none; border: 1px solid var(--accent-dim);
+  }
+  .btn.primary { background: var(--accent); color: #1a1406; border-color: var(--accent); }
+  .btn.ghost { color: var(--text); }
+
+  .rule { border: none; height: 1px; margin: 48px 0 40px; background: linear-gradient(90deg, transparent, var(--accent-dim) 50%, transparent); }
+
+  section.about { margin-bottom: 8px; }
+  .eyebrow { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-dim); margin: 0 0 10px; }
+  h2 { font-family: var(--serif); font-weight: 600; font-size: 1.7rem; margin: 0 0 14px; color: var(--text); }
+  p { margin: 0 0 14px; max-width: 62ch; }
+
+  .feature-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 28px 0 8px;
+  }
+  @media (max-width: 560px) { .feature-grid { grid-template-columns: 1fr; } }
+  .feature {
+    background: var(--surface); border: 1px solid var(--surface-line); border-radius: 12px; padding: 20px;
+  }
+  .feature .glyph { color: var(--accent); font-size: 20px; margin-bottom: 10px; display: block; }
+  .feature h3 { font-family: var(--serif); font-weight: 600; font-size: 1.15rem; margin: 0 0 6px; color: var(--text); }
+  .feature p { margin: 0; font-size: 14.5px; color: var(--text-dim); }
+
+  .tool-card {
+    background: var(--surface); border: 1px solid var(--surface-line); border-radius: 14px;
+    padding: 26px 28px; margin-top: 8px;
+  }
+  .tool-card .eyebrow { color: var(--accent); }
+  .tool-card h3 { font-family: var(--serif); font-weight: 600; font-size: 1.4rem; margin: 0 0 10px; }
+  .scopes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .scope {
+    font-size: 12.5px; font-family: var(--sans); color: var(--text-dim);
+    border: 1px solid var(--surface-line); border-radius: 6px; padding: 4px 9px;
+  }
+
+  footer {
+    margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--surface-line);
+    display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; justify-content: space-between;
+    font-size: 14px; color: var(--text-dim);
+  }
+  footer nav { display: flex; gap: 20px; }
+</style>
+
+<main>
+  <header class="hero">
+    <div class="mark">вЅ вњ¦ вѕ</div>
+    <p class="arabic-title">ШўЩЃШ§Щ‚ Ш§Щ„Щ‚Ш±ШўЩ†</p>
+    <h1>Quran Horizons</h1>
+    <p class="tagline">Full-Surah Qur'an recitation, Arabic script and English translation, for quiet reflection at any hour.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="https://www.youtube.com/@quranhorizonstv">Watch on YouTube</a>
+      <a class="btn ghost" href="#about">About the channel</a>
+    </div>
+  </header>
+
+  <hr class="rule">
+
+  <section class="about" id="about">
+    <p class="eyebrow">The channel</p>
+    <h2>Recitation, read-along, reflection</h2>
+    <p>Quran Horizons publishes complete Surah recitations in a calm, cinematic style вЂ” Murattal-paced recitation paired with accurate Arabic script and clear English subtitles, so a viewer can follow along verse by verse and return to any passage later.</p>
+    <p>Alongside full Surahs, the channel publishes single-page mushaf readings, short verse reminders, and duas drawn directly from the Qur'an and authenticated hadith вЂ” no music, no narration layered over the recitation, just the text and its meaning.</p>
+
+    <div class="feature-grid">
+      <div class="feature">
+        <span class="glyph">пґѕ пґї</span>
+        <h3>Full Surahs</h3>
+        <p>Complete recitations with Arabic script and English translation, start to finish.</p>
+      </div>
+      <div class="feature">
+        <span class="glyph">вѕ</span>
+        <h3>Before Sleep</h3>
+        <p>Longer, unhurried episodes for calm nighttime listening.</p>
+      </div>
+      <div class="feature">
+        <span class="glyph">вњ¦</span>
+        <h3>Daily Reminders</h3>
+        <p>Short verses and duas for reflection throughout the day.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <div class="tool-card">
+      <p class="eyebrow">This page also serves</p>
+      <h3>The channel's TikTok integration</h3>
+      <p>Quran Horizons uses TikTok's Content Posting API to publish its own recitation videos to its own TikTok account. The integration reads nothing from other accounts and posts nothing on anyone else's behalf вЂ” it's a single operator publishing their own content.</p>
+      <div class="scopes">
+        <span class="scope">user.info.basic</span>
+        <span class="scope">user.info.profile</span>
+        <span class="scope">user.info.stats</span>
+        <span class="scope">video.upload</span>
+        <span class="scope">video.publish</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>В© 2026 Quran Horizons В· <a href="mailto:liliiasul1553@gmail.com">liliiasul1553@gmail.com</a></span>
+    <nav>
+      <a href="terms.html">Terms of Service</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </footer>
+</main>
+
